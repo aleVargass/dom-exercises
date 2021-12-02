@@ -1,0 +1,17 @@
+#divBtnsClock {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#clock {
+  font-size: 2rem;
+}
+
+button.active {
+  opacity: 0.5;
+}
+
+button.active:hover {
+  cursor: auto;
+}

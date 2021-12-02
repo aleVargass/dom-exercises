@@ -1,0 +1,34 @@
+.button {
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: var(--gold);
+  border: none;
+  width: 90px;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  padding: 4rem 0.5rem 0 0.5rem;
+}
+
+.rem2 {
+  font-size: 1.5rem;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.textCenter {
+  text-align: center;
+}

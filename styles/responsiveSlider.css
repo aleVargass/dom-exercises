@@ -1,0 +1,55 @@
+.containerSlider {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.slider {
+  display: inline-flex;
+  align-items: center;
+  width: 600%;
+  margin-left: -100%;
+}
+
+.slider img {
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  align-content: flex-start;
+  background-color: #fff;
+  opacity: 0.7;
+  border-radius: 50%;
+  border-style: none;
+  width: 40px;
+  height: 40px;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow span {
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid #000;
+  border-right: 5px solid #000;
+  border-top-right-radius: 2.5px;
+}
+
+.right span {
+  rotate: 45deg;
+}
+
+.left span {
+  rotate: -135deg;
+}

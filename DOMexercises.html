@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/elements.css">
+    <link rel="stylesheet" href="styles/class.css">
+    <link rel="stylesheet" href="styles/connectionState.css">
+    <link rel="stylesheet" href="styles/scrollTopBtn.css">
+    <link rel="stylesheet" href="styles/darkmodeBtn.css">
+    <link rel="stylesheet" href="styles/digitalClock&Alarm.css">
+    <link rel="stylesheet" href="styles/keyboardEvents.css">
+    <link rel="stylesheet" href="styles/searchFilter.css">
+    <link rel="stylesheet" href="styles/contactForm.css">
+    <link rel="stylesheet" href="styles/narrator.css">
+    <link rel="stylesheet" href="styles/responsiveSlider.css">
+
+    <title>DOM exercises</title>
+</head>
+
+<body class="body" data-dark>
+    <!-- h1 header -->
+    <header class="header">
+        <h1>DOM exercises</h1>
+    </header>
+
+    <!-- aside menu -->
+    <aside class="panel">
+        <nav class="menu">
+            <a href="#Digital clock & alarm" data-scrollSpy>Digital clock & alarm</a>
+            <a href="#Keyboard events" data-scrollSpy>Keyboard events</a>
+            <a href="#Countdown" data-scrollSpy>Countdown</a>
+            <a href="#Responsive with JS" data-scrollSpy>Responsive with JS</a>
+            <a href="#Responsive tester" data-scrollSpy>Responsive tester</a>
+            <a href="#Devices detection" data-scrollSpy>Devices detection</a>
+            <a href="#Connection detection" data-scrollSpy>Connection detection</a>
+            <a href="#Geolocation" data-scrollSpy>Geolocation</a>
+            <a href="#Search filter" data-scrollSpy>Search filter </a>
+            <a href="#Digital lottery" data-scrollSpy>Digital lottery </a>
+            <a href="#Responsive slider" data-scrollSpy>Responsive slider</a>
+            <a href="#visibilityChange" data-scrollSpy>Visibility change</a>
+            <a href="#contactForm" data-scrollSpy>Contact form</a>
+            <a href="#narrator" data-scrollSpy="">Narrator</a>
+
+        </nav>
+    </aside>
+
+    <!-- sections -->
+    <main>
+        <section id="Digital clock & alarm" class="section" data-scrollSpy>
+            <h2>Digital clock & alarm</h2>
+            <p id="clock" class="rem2"></p>
+            <div id="divBtnsClock">
+                <button id="startClock">Start clock</button>
+                <button id="stopClock">Stop clock</button>
+                <button id="startAlarm">Start alarm</button>
+                <button id="stopAlarm">Stop alarm</button>
+            </div>
+        </section>
+        <section id="Keyboard events" class="section" data-scrollSpy>
+            <h2>Keyboard events</h2>
+            <div id="blackBox">
+                <div id="yellowDot"></div>
+            </div>
+        </section>
+        <section id="Countdown" class="section" data-scrollSpy>
+            <h2>Countdown</h2>
+            <h3 id="countdown"></h3>
+        </section>
+        <section id="Responsive with JS" class="section" data-scrollSpy>
+            <h2>Responsive with JS</h2>
+            <div id="video"></div>
+            <div id="map"></div>
+        </section>
+        <section id="Responsive tester" class="section" data-scrollSpy>
+            <h2>Responsive tester</h2>
+            <div>
+                <form id="responsivetesterForm">
+                    <input name="url" type="url" placeholder="Url" required>
+                    <input name="width" type="text" placeholder="Width" required>
+                    <input name="height" type="text" placeholder="Height" required>
+                    <input class='button' name='test' type="submit" value="Open">
+                    <input class='button' name='close' type="button" value="Close">
+                </form>
+            </div>
+        </section>
+        <section id="Devices detection" class="section" data-scrollSpy>
+            <h2>Devices detection</h2>
+            <p id="userAgent"></p>
+        </section>
+        <section id="Connection detection" class="section" data-scrollSpy>
+            <h2>Connection detection</h2>
+            <div class="connectionMsg"></div>
+            <p>Check if you have disconnected</p>
+        </section>
+        <section id="Geolocation" class="section" data-scrollSpy>
+            <h2>Geolocation</h2>
+            <p id="position"></p>
+        </section>
+        <section id="Search filter" class="section" data-scrollSpy>
+            <h2>Search filter</h2>
+            <input id="searchFilter" type="search" placeholder="search...">
+            <div class="cards">
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Shinobu_Anime_Profile.webp" alt="">
+                    <figcaption>Shinobu Kocho</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Muichiro_Anime_Profile.webp" alt="">
+                    <figcaption>Muichiro Tokito</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Mitsuri_Anime_Profile.webp" alt="">
+                    <figcaption>Mitsuri Kanroji</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Obanai_Anime_Profile.webp" alt="">
+                    <figcaption>Obanai Iguro</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Tengen_Anime_Profile.webp" alt="">
+                    <figcaption>Tengen Uzui</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Kanae_Anime_Profile.webp" alt="">
+                    <figcaption>Kanae Kocho</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Kyojuro_Anime_Profile.webp" alt="">
+                    <figcaption>Kyojuro Rengoku</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Gyomei_Anime_Profile.webp" alt="">
+                    <figcaption>Gyomei Himejima</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Sakonji_Anime_Profile.webp" alt="">
+                    <figcaption>Sakonji Urokodaki</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Jigoro_Anime_Profile.webp" alt="">
+                    <figcaption>Jigoro Kuwajima</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Giyu_Anime_Profile.webp" alt="">
+                    <figcaption>Giyu Tomioka</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="images/kimetsu-no-yaiba/Sanemi_Anime_Profile.webp" alt="">
+                    <figcaption>Sanemi Shinazugawa</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="Digital lottery" class="section" data-scrollSpy>
+            <h2>Digital lottery</h2>
+            <ul class="contestants">
+                <li>Python</li>
+                <li>Java</li>
+                <li>JS</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>C++</li>
+                <li>Swift</li>
+            </ul>
+            <button class="button getWinner">Winner</button>
+        </section>
+        <section id="Responsive slider" class="section" data-scrollSpy>
+            <h2>Responsive slider</h2>
+            <div class="containerSlider">
+                <div class="slider" id="slider">
+                    <img class="imgsSlider" src="images/final-fantasy/final-fantasy-7.jpg">
+                    <img class="imgsSlider" src="images/final-fantasy/final-fantasy-8.jpg">
+                    <img class="imgsSlider" src="images/final-fantasy/final-fantasy-9.jpg">
+                    <img class="imgsSlider" src="images/final-fantasy/final-fantasy-10.jpg">
+                    <img class="imgsSlider" src="images/final-fantasy/final-fantasy-12.jpg">
+                    <img class="imgsSlider" src="images/final-fantasy/crisis-core.jpg">
+                    <button class="arrow left">
+                        <span class=""></span>
+                    </button>
+                    <button class="arrow right">
+                        <span class=""></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="visibilityChange" class="section" data-scrollSpy>
+            <h2>Visibility Change</h2>
+            <video class="flexCenter" data-scrollVisibilityChange src="assets/lunaZoe.mp4" width="70%" controls
+                muted></video>
+        </section>
+        <section id="contactForm" class="section" data-scrollSpy>
+            <h2>Contact form</h2>
+            <form class="contactForm" action="https://formsubmit.co/domexercisesale@gmail.com" method="POST"
+                target="_blank">
+                <legend>Send your comments</legend>
+                <input class="inputForm name" name="name" type="text" placeholder="Name"
+                    pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Only letters and white spaces" required>
+                <input class="inputForm email" name="email" type="email" placeholder="Email"
+                    pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$"
+                    title="Enter a valid format: your@email.com" required>
+                <input class="inputForm matter" name="matter" type="text" placeholder="Matter" pattern="^.{1,50}$"
+                    title="Maximun 50 characters" required>
+                <textarea class="inputForm comments" name="comments" type="text" placeholder="Comments" cols="20"
+                    rows="10" data-pattern="^.{1,255}$" title="Maximun 255 characters" required></textarea>
+                <input class="contactForm__submitBtn button" type="submit" value="Sent"></input>
+                <div class="loader noVisible">
+                    <img src="assets/oval.svg" alt="Loading">
+                </div>
+                <div class="response noVisible">
+                    <p>Data has been sent</p>
+                </div>
+            </form>
+        </section>
+        <section id="narrator" class="section narrator" data-scrollSpy="">
+            <h2>Narrator</h2>
+            <select class="select"></select>
+            <textarea class="textarea" cols="50" rows="10"
+                placeholder="Introduce some text to use the speechSynthesis API."></textarea>
+            <button class="readButton">Read text</button>
+        </section>
+
+        <!-- hamburger button -->
+        <button class="panel-btn hamburger hamburger--arrow">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        <!-- darkmode button -->
+        <button class="darkmodeBtn">
+            <img class='darkmodeIcon' src="assets/moon.png" alt="moon">
+        </button>
+
+        <!-- scrollTopBtn -->
+        <button class="scrollTopBtn hidden">
+            <span></span>
+        </button>
+    </main>
+
+    <!-- scripts js -->
+    <script src="js/index.js" type="module"></script>
+</body>
+
+</html>

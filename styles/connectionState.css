@@ -1,0 +1,20 @@
+.connectionMsg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #f0ffff;
+  padding: 20px;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+.connectionMsg.online {
+  background-color: #4cd137;
+  visibility: visible;
+}
+
+.connectionMsg.offline {
+  background-color: #dc143d;
+  visibility: visible;
+}

@@ -1,0 +1,72 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  --formErrorColor: #b80c00;
+  width: 80%;
+}
+
+.contactForm legend,
+.contactForm .response {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.contactForm .loader {
+  width: 2rem;
+  align-self: center;
+}
+
+.contactForm .inputForm {
+  margin: 1rem;
+  width: auto;
+}
+
+.contactForm input[type="submit"] {
+  align-self: flex-end;
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.contactForm .inputForm {
+  border: thin solid lightgray;
+}
+
+.contactForm .inputForm:focus {
+  border: thin solid gray;
+}
+
+.contactForm .msgError {
+  margin: -1rem 1rem 0;
+  padding: 0.25rem;
+  font-size: 80%;
+  color: var(--formErrorColor);
+  transition: all 800ms ease;
+  width: auto;
+}
+
+.contactForm .msgError.is-active {
+  display: block;
+  animation: showMsg 0.5s 1 normal 0s ease-out both;
+}
+
+.contactForm .none {
+  display: none;
+}
+
+@keyframes showMsg {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.noVisible {
+  visibility: hidden;
+  opacity: 0;
+  transform: all 0.5s ease;
+}
