@@ -1,10 +1,10 @@
 .button {
-  padding: 12px;
-  border-radius: 20px;
   font-size: 16px;
   background-color: var(--gold);
   border: none;
+  border-radius: 20px;
   width: 90px;
+  padding: 12px;
 }
 
 .button:hover {
@@ -13,11 +13,12 @@
 }
 
 .section {
+  padding: 4rem 0.5rem 0 0.5rem;
+  height: 100vh;
+  max-height: 1920px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   align-items: center;
-  padding: 4rem 0.5rem 0 0.5rem;
 }
 
 .rem2 {
