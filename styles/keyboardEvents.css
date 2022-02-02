@@ -1,17 +1,16 @@
 #blackBox {
-    width: 90%;
-    height: 40vh;
-    background-color: var(--black);
-    border-radius: 1rem;
+  width: 90%;
+  height: 40%;
+  background-color: var(--black);
+  position: relative;
 }
 
 #yellowDot {
     position: relative;
-    top: 10rem;
-    left: 10rem;
-    width: 2rem;
-    height: 2rem;
+    top: 100px;
+    left: 100px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: var(--gold);
-    transition: transform 0.1s linear;
 }

@@ -1,46 +1,81 @@
-/**
- * Adiciones que quiero
- * movimiento diagonal al dot
- * if focus en la blackBox e.preventDefault() de las arrows
- * No se exportan por default ya que son dos.
- */
 export function shortcuts(e) {
   if (e.key === 'a' && e.altKey) {
     alert('Mandaste un alert con el teclado.')
   };
 };
 
-export  function move(e, box, dot) {
-  let x = 0;
-  let y = 0;
-  const $dot = document.querySelector(dot),
-  $box = document.querySelector(box),
-  limitDot = $dot.getBoundingClientRect(),
-  limitBox = $box.getBoundingClientRect();
 
-switch (e.keyCode) {
-  case 37:
-    if (limitDot.left > limitBox.left + 32) x--;
-    e.preventDefault();
-    break;
-  case 38:
-    if (limitDot.top > limitBox.top + 32)  {
-      e.preventDefault();
-      y--; 
+
+export function moveElement() {
+  let up = false,
+  right = false,
+  down = false,
+  left = false,
+  x = 100,
+  y = 100;
+
+  window.addEventListener('keydown',press);
+  function press(e){
+    switch(e.keyCode) {
+      case 87:
+        up = true
+        break;
+      case 68:
+        right = true
+        break;
+      case 83:
+        down = true
+        break;
+      case 65:
+        left = true
+        break;
     }
-    break;
-  case 39:
-    e.preventDefault();
-    if (limitDot.right < limitBox.right - 32) x++;
-    break;
-  case 40:
-    if (limitDot.bottom < limitBox.bottom - 32)  {
-      e.preventDefault();
-      y++;
+  }
+
+  window.addEventListener('keyup',release);
+  function release(e){
+    switch(e.keyCode) {
+      case 87:
+        up = false
+        break;
+      case 68:
+        right = false
+        break;
+      case 83:
+        down = false
+        break;
+      case 65:
+        left = false
+        break;
     }
-    break;
-  default:
-    break;
-}
-$dot.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+  }
+
+  window.addEventListener("resize", e => {
+    x = 100;
+    y = 100;
+  })
+
+  function gameLoop(){
+    let box = document.getElementById("blackBox")
+    let element = document.getElementById('yellowDot');
+
+    if (up && y > 0){
+      y -= 10
+    }
+    if (right && x < box.clientWidth-30){
+      x += 10
+    }
+    if (down && y < box.clientHeight-30){
+      y += 10
+    }
+    if (left && x > 0){
+      x -= 10
+    }
+
+    element.style.left = x+'px'
+    element.style.top = y+'px'
+
+    window.requestAnimationFrame(gameLoop);
+  }
+  window.requestAnimationFrame(gameLoop);
 }

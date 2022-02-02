@@ -1,9 +1,8 @@
 import hamburgerMenu from "./modules/hamburgerMenu.js";
-import {clock, alarm} from "./modules/clockAlarm.js";
-import { shortcuts, move } from "./modules/keyboardEvent.js";
-import countdown from "./modules/countdown.js";
 import scrollTopBtn from "./modules/scrollTopBtn..js";
 import darkmode from "./modules/darkmode.js";
+import {clock, alarm} from "./modules/clockAlarm.js";
+import countdown from "./modules/countdown.js";
 import responsive from "./modules/responsiveJS.js";
 import responsiveTester from "./modules/responsiveTester.js";
 import devicesDetection from "./modules/devicesDetection.js";
@@ -16,6 +15,7 @@ import scrollSpy from "./modules/scrollSpy.js";
 import visibilityChange from "./modules/visibilityChange.js";
 import contactForm from "./modules/contactForm.js";
 import narrator from "./modules/narrator.js";
+import {shortcuts, moveElement} from "./modules/keyboardEvent.js";
 
 connectionDetection('.connectionMsg');
 darkmode('.darkmodeBtn', '.darkmodeIcon', 'dark');
@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', e => {
   visibilityChange();
   contactForm();
   narrator();
+  moveElement();
 });
 
-  document.addEventListener('keydown', e => {
-    shortcuts(e);
-    move(e, '#blackBox', '#yellowDot');
-  })
+document.addEventListener('keydown', e => {
+  shortcuts(e);
+});
