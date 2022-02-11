@@ -1,14 +1,12 @@
-const d = document;
-const c = console;
 export default function visibilityChange() {
-  const $videos = d.querySelectorAll('video[data-scrollVisibilityChange]');
+  const $video = document.getElementById("videoVisibilityChange");
 
   const callback = function(entries)  {
     entries.forEach(entry => {
       entry.isIntersecting ? entry.target.play() : entry.target.pause();
       
-      d.addEventListener('visibilitychange', e => {
-        if (d.hidden) {
+      document.addEventListener('visibilitychange', e => {
+        if (document.hidden) {
           entry.target.pause()
         } else {
            entry.isIntersecting ? entry.target.play() : entry.target.pause();
@@ -19,5 +17,5 @@ export default function visibilityChange() {
   };
 
   const observer = new IntersectionObserver(callback, {threshold: [.5, .75]});
-  $videos.forEach(video => observer.observe(video));
+  observer.observe($video);
 };

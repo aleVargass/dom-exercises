@@ -1,6 +1,6 @@
 export function shortcuts(e) {
   if (e.key === 'a' && e.altKey) {
-    alert('Mandaste un alert con el teclado.')
+    alert('The dot moves with requestAnimationFrame API')
   };
 };
 
@@ -56,8 +56,8 @@ export function moveElement() {
   })
 
   function gameLoop(){
-    let box = document.getElementById("blackBox")
-    let element = document.getElementById('yellowDot');
+    let box = document.getElementById("box")
+    let element = document.getElementById('dot');
 
     if (up && y > 0){
       y -= 10

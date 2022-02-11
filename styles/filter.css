@@ -1,0 +1,50 @@
+.cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.card {
+  text-align: center;
+  margin: 0;
+}
+
+.card.filter {
+  display: none;
+}
+
+.imgFilter {
+  width: 100px;
+  height: auto;
+}
+
+.figcaption {
+  padding-top: 5px;
+}
+
+@media (min-width: 425px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .imgFilter {
+    width: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    gap: 50px;
+  }
+
+  .imgFilter {
+    width: 150px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

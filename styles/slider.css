@@ -1,0 +1,32 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  max-width: 800px;
+}
+
+#wrap {
+  display: flex; /*place imgs one after another*/
+  width: 500%;
+  transform: translateX(-100%);
+}
+
+.imgSlider {
+  max-width: 100%;
+  height: auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  padding: 2px 4px;
+}
+
+.arrow.left {
+  left: 5px;
+}
+
+.arrow.right {
+  right: 5px;
+}

@@ -1,7 +1,7 @@
 import hamburgerMenu from "./modules/hamburgerMenu.js";
-import scrollTopBtn from "./modules/scrollTopBtn..js";
+import scrollTopBtn from "./modules/scrollTop.js";
 import darkmode from "./modules/darkmode.js";
-import {clock, alarm} from "./modules/clockAlarm.js";
+import clock from "./modules/digitalClock.js";
 import countdown from "./modules/countdown.js";
 import responsive from "./modules/responsiveJS.js";
 import responsiveTester from "./modules/responsiveTester.js";
@@ -9,25 +9,22 @@ import devicesDetection from "./modules/devicesDetection.js";
 import connectionDetection from "./modules/connectionDetection.js";
 import geolocation from "./modules/geolocation.js";
 import searchFilter from "./modules/searchFilter.js";
-import digitalLottery from "./modules/digitalLottery.js";
-import responsiveSlider from "./modules/responsiveSlider.js";
+import responsiveSlider from "./modules/slider.js";
 import scrollSpy from "./modules/scrollSpy.js";
 import visibilityChange from "./modules/visibilityChange.js";
 import contactForm from "./modules/contactForm.js";
-import narrator from "./modules/narrator.js";
 import {shortcuts, moveElement} from "./modules/keyboardEvent.js";
 
-connectionDetection('.connectionMsg');
-darkmode('.darkmodeBtn', '.darkmodeIcon', 'dark');
+connectionDetection();
+darkmode('.darkmodeIcon');
 
 document.addEventListener('DOMContentLoaded', e => {
-  hamburgerMenu('.panel-btn', '.panel', '.menu a'); 
-  clock('#clock', '#startClock', '#stopClock');
-  alarm('#startAlarm', '#stopAlarm');
-  countdown('countdown',
-  'Jan 01, 2022 00:00:00',
-  'Happy new year!')
-  scrollTopBtn('.scrollTopBtn')
+  hamburgerMenu('hamburgerBtn', 'mobileMenu', '.mobileItem'); 
+  clock('clock', "clockBtn");
+  countdown('countdownStamp',
+  'Jan 01, 2023 00:00:00',
+  'Happy new year!');
+  scrollTopBtn('scrollTop');
   responsive('video','(max-width: 700px)',
   `<a href='https://youtu.be/eq8r1ZTma08' target='_blank' rel='noopener'>Ver video</a>`,
   '<iframe width="560" height="315" src="https://www.youtube.com/embed/eq8r1ZTma08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
@@ -38,12 +35,10 @@ document.addEventListener('DOMContentLoaded', e => {
   devicesDetection('userAgent');
   geolocation('position');
   searchFilter('searchFilter', '.card');
-  digitalLottery('.getWinner', '.contestants');
-  responsiveSlider('slider', '.imgsSlider', '.arrow.left', '.arrow.right')
+  responsiveSlider('wrap', '.imgSlider', 'arrowLeft', 'arrowRight')
   scrollSpy();
   visibilityChange();
   contactForm();
-  narrator();
   moveElement();
 });
 

@@ -13,5 +13,5 @@ export default function responsive(id, mq, mobileContent, desktopContent) {
   };
 
   breakpoint.addEventListener('change', responsive);
-  responsive(breakpoint)
+  responsive(breakpoint);
 }

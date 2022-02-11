@@ -5,68 +5,33 @@
   width: 80%;
 }
 
-.contactForm legend,
-.contactForm .response {
+.contactForm .legend {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 16px;
 }
 
-.contactForm .loader {
-  width: 2rem;
-  align-self: center;
-}
-
-.contactForm .inputForm {
-  margin: 1rem;
+.inputForm {
+  margin: 16px;
   width: auto;
 }
 
-.contactForm input[type="submit"] {
+.submitBtnForm {
   align-self: flex-end;
-  width: 5rem;
-  margin-right: 1rem;
-}
-
-.contactForm .inputForm {
-  border: thin solid lightgray;
-}
-
-.contactForm .inputForm:focus {
-  border: thin solid gray;
+  width: 80px;
+  margin-right: 16px;
 }
 
 .contactForm .msgError {
-  margin: -1rem 1rem 0;
-  padding: 0.25rem;
-  font-size: 80%;
+  margin: -16px 16px 0;
+  padding: 4px;
+  font-size: 12px;
   color: var(--formErrorColor);
-  transition: all 800ms ease;
-  width: auto;
 }
 
 .contactForm .msgError.is-active {
   display: block;
-  animation: showMsg 0.5s 1 normal 0s ease-out both;
 }
 
-.contactForm .none {
+.contactForm .displayNone {
   display: none;
-}
-
-@keyframes showMsg {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.noVisible {
-  visibility: hidden;
-  opacity: 0;
-  transform: all 0.5s ease;
 }

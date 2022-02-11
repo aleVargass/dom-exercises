@@ -1,28 +1,32 @@
-const d = document;
-export default function darkmode(btn, icon, classDark) {
-  const $icon = d.querySelector(icon),
-  //si se quiere aplicar estilos a un elemento viendo si tiene un atributo
-  $selectors = d.querySelectorAll('[data-dark]');
+export default function darkmode(icon) {
+  const $icon = document.querySelector(icon),
+  $selectors = document.querySelectorAll('[data-dark]');
   const light = () => {
     $icon.classList.remove('active');
-    $icon.setAttribute('src', 'assets/moon.png');
-    $selectors.forEach(el => el.classList.remove(classDark));
+    $icon.setAttribute('class', 'darkmodeIcon fas fa-moon');
+    $selectors.forEach(el => el.classList.remove("dark"));
     localStorage.setItem('theme', 'light');
   }
   
   const dark = () => {
+    $icon.setAttribute('class', 'darkmodeIcon fas fa-sun');
     $icon.classList.add('active');
-    $icon.setAttribute('src', 'assets/sun.png');
-    $selectors.forEach(el =>  el.classList.add(classDark));
+    $selectors.forEach(el =>  el.classList.add("dark"));
     localStorage.setItem('theme', 'dark');
   }
   
-  if (localStorage.getItem('theme') === 'dark') dark();
+  if (localStorage.getItem('theme') === 'dark') {
+    dark();
+  }
 
-  d.addEventListener('click', e => {
-    if (e.target.matches(btn) || e.target.matches(`${btn} *`)) {
-      if ($icon.classList.contains('active')) light();
-      else dark();
+  document.addEventListener('click', e => {
+    if (e.target.matches(icon)) {
+      if ($icon.classList.contains('active')) {
+       light(); 
+      } else {
+        dark();
+      }
     };
   });
+  
 };

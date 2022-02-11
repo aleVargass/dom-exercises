@@ -1,0 +1,105 @@
+.section {
+  padding-top: 72px;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.span {
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+.button {
+  margin: 5px;
+  padding: 12px 18px;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--red);
+  color: var(--azure);
+  box-shadow: 0 5px var(--redHover);
+  font-weight: 600;
+  user-select: none;
+}
+
+.button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.input {
+  display: block;
+  font-size: 16px;
+  margin: 15px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border: 1px solid gray;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.textarea {
+  resize: none;
+  font-family: var(--sansSerif);
+  padding: 0.5rem;
+  border: thin solid lightgray;
+}
+
+/* digitalClock */
+#clock {
+  font-size: 32px;
+}
+
+.button.active {
+  transform: translateY(4px);
+  box-shadow: none;
+} 
+
+/* countdown */
+#countdownStamp {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* windowTester */ 
+.windowTesterForm {
+  text-align: center;
+}
+
+/* video */
+
+#videoVisibilityChange {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+}
+
+/* narrator section */
+#selectLanguage, #textareaNarrator {
+  width: 50%;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    width: 80%;
+  }
+}

@@ -9,7 +9,7 @@ export default function countdown(countdown, limitDate, message) {
     hours = ('0' + f((countdown % 86400000) / 3600000)).slice(-2) ,
     mins = ('0' + f((countdown % 3600000) / 60000)).slice(-2) ,
     secs = ('0' + f((countdown % 60000) / 1000)).slice(-2)
-    $countdown.textContent = `${f(days)} días ${hours} horas ${mins} mins ${secs} secs`;
+    $countdown.textContent = `${f(days)} days ${hours} hours ${mins} mins ${secs} secs`;
 
     if (countdown < 0) {
       clearInterval(countdownTempo1s);

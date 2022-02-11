@@ -1,0 +1,22 @@
+:root {
+  --poppinsFont: "Popins", sans-serif;
+  --azure: #f0ffff;
+  --black: #222;
+  --red: #e63946;
+  --redHover: #B32D38;
+  --shadow: rgb(235,235,235);
+}
+
+#html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+#body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--poppinsFont);
+}

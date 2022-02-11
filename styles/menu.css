@@ -1,0 +1,135 @@
+/* mobileMenu */
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--red);
+    z-index: 1; /*box of keyboardEvents*/
+}
+
+#h1 {
+    font-size: 28px;
+    margin-left: 5vw;
+    color: var(--azure);
+}
+
+#iconsHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1vw;
+}
+
+.fa-signal, .darkmodeIcon, #hamburgerBtn {
+    font-size: 24px;
+    border-radius: 4px;
+    color: var(--azure);
+    padding: 7px;
+    cursor: pointer;
+}
+
+.darkmodeIcon:hover, #hamburgerBtn:hover {
+    background-color: var(--redHover);
+}
+
+.fa-signal {
+    position: relative;
+    cursor: auto;
+    font-size: 23px;
+}
+
+.fa-times {
+    position: absolute;
+    color: var(--red);
+    left: 5px;
+    top: 5px;
+    font-size: 10px;
+}
+  
+.dark {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+#desktopMenu {
+    display: none;
+}
+  
+#mobileMenu {
+    position: relative;
+    transform: translateX(-100%);
+    transform-origin: -100%;
+    top: 72px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: all 200ms ease-out;
+    overflow-y: auto;
+    background-color: var(--black);  
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 100;
+}
+  
+#mobileMenu.is-active {
+    transform: translateX(0);
+}
+  
+.mobileItem {
+    color: var(--azure);
+    padding: 16px 0;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.mobileItem:hover, .mobileItem.active {
+    background-color: var(--red);
+  }
+  
+/* desktopMenu */
+@media (min-width: 1024px) {
+    #h1 {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        width: 80%;
+    }
+
+    #hamburgerBtn {
+        display: none;
+    }
+
+    #mobileMenu {
+        display: none;
+    }
+    
+    #desktopMenu {
+        position: fixed;
+        top: 72px;
+        right: 0;
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        z-index: 30;
+        background-color: var(--black);    
+    }
+  
+    .desktopItem {
+      font-size: 18px;
+      padding: 16px;
+      color: var(--azure);
+      text-decoration: none;
+    }
+
+    .desktopItem:hover, .desktopItem.active {
+        background-color: var(--red);
+    }
+  }
+  

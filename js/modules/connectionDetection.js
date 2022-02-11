@@ -1,21 +1,12 @@
-const d  = document,
-n = navigator;
-export default function connectionDetection(msg) {
-const $msg = d.querySelector(msg);
+export default function connectionDetection() {
+  const $cross = document.querySelector(".fa-times");
 
   addEventListener('online', e => {
-    $msg.textContent = `Conexión reestablecida`;
-    $msg.classList.add('online');
-    setTimeout(() => {
-      $msg.classList.remove('online')
-    }, 2000);
+    $cross.style.color = "#e63946";
   })
   
   addEventListener('offline', e => {
-    $msg.textContent = `Conexión perdida`;
-    $msg.classList.add('offline');
-    setTimeout(() => {
-      $msg.classList.remove('offline')
-    }, 2000)
+    $cross.style.color = "#f0ffff";
   })
-  }
+
+}

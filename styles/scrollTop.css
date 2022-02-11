@@ -1,0 +1,14 @@
+#scrollTop {
+  z-index: 1;
+  position: fixed;
+  bottom: 1vh;
+  left: 1vh;
+  margin: 0;
+  padding: 5px;
+  color: var(--azure);
+  font-size: 24px;
+}
+
+#scrollTop.displayNone {
+  display: none;
+}
