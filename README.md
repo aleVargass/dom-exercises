@@ -2,10 +2,11 @@
 
 ## This is a page with a bunch of Javascript exercises with in the DOM
 
-### Sections
+### Exercises
+
+Each exercise/section has a sligth description
 
 - Digital Clock
-  - A clock with
 - Keyboard Events
 - Countdown to new year
 - Load responsive 
